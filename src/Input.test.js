@@ -3,6 +3,15 @@ import Input from "./Input";
 import {shallow} from 'enzyme';
 import {checkProps, findByTestAttr} from "../test/testUtils";
 
+// const mockSetCurrentGuess = jest.fn();
+// mock entire module for destructuring useState on import
+// jest.mock('react', () => ({
+//     ...jest.requireActual(
+//         'react'
+//     ),
+//     useState: (initialState) => [initialState, mockSetCurrentGuess]
+// }))
+
 const defaultProps = {};
 const setup = (props = {}) => {
     const setupProps = {...defaultProps, ...props};
