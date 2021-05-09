@@ -4,4 +4,11 @@ export const findByTestAttr = (wrapper, val) => {
     return wrapper.find(`[data-test='${val}']`);
 }
 
-export const checkProps = (component, defaultProps) => checkPropTypes(component.propTypes, defaultProps, 'prop', component.name);
+export const checkProps = (component, defaultProps) => {
+    const propError = checkPropTypes(
+        component.propTypes,
+        defaultProps,
+        'prop',
+        component.name);
+    expect(propError).toBeUndefined();
+};
